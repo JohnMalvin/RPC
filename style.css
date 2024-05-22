@@ -1,0 +1,352 @@
+:root{
+    --dark: rgb(20, 20, 20);
+}
+
+@keyframes rotatation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('Arial-BoldMT.woff2') format('woff2'),
+         url('Arial-BoldMT.woff') format('woff');
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+body{
+    background-color: var(--dark);
+    color: white;
+}
+video{
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.header{
+    /* background-color: aqua; */
+    margin-top: 35px;
+}
+#title{
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 5px 5px 7px rgba(255, 255, 255, 0.2);
+}
+
+.container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+}
+.top, .option, button{
+    backdrop-filter: blur(7px);
+}
+.top{
+    width: 100%;
+    height: 60%;
+    /* background-color: yellow; */
+    border: 4px solid white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 7px  rgba(255, 255, 255, 0.5));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contop{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+.status{
+    display: none;
+    margin-top: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    /* background-color: cyan; */
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+}
+#playagain{
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+    font-weight: 900;
+    border-radius: 10px;
+    color: white;
+    border: 3px solid white;
+    background-color: transparent;
+
+}
+#playagain:hover{
+    transform: scale(1.2);
+    background-color: white;
+    color: rgb(20, 20, 20);
+    /* border: 5px solid black; */
+}
+.play{
+    /* background-color: cyan; */
+    margin: 0 auto;
+    width: 150px;
+    height: 70px;
+}
+#status{
+    font-size: 30px;
+    display: block;
+}
+#versus{
+    transform: scale(1.5);
+}
+#comp, #player{
+    animation: rotatation 2000ms ease-in-out infinite;
+}
+#player{
+    background: url('ICONS/LOAD.png') no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+}
+#comp{
+    background: url('ICONS/LOAD2.png') no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+}
+.disp{
+    /* background-color: green; */
+    width: 100px;
+    height: 120px;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.disp img{
+    /* background-color: yellow; */
+    width: 100%;
+    height: 100px;
+}
+.disp p{
+    /* background-color: aqua; */
+    margin: 0;
+    text-align: center;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.1);
+}
+.bottom{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.opt{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 50px 0;
+}
+.option{
+    cursor: pointer;
+    border: 2px solid white;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    margin: auto;
+    filter: drop-shadow(0px 0px 7px  rgba(255, 255, 255, 0.5));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.option:hover{
+    transform: scale(1.2);
+}
+.image{
+    width: 100%;
+    height: 100%;
+}
+#rockimg{
+    background: url('ICONS/ROCKOUT.png') no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+}
+#paperimg{
+    background: url('ICONS/PAPEROUT.png') no-repeat;
+    background-size: contain;
+}
+#scisorsimg{
+    background: url('ICONS/SCISORSOUT.png') no-repeat;
+    background-size: contain;
+}
+#shoot{
+    cursor: pointer;
+    width: 100px;
+    height: 30px;  
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    filter: drop-shadow(0px 0px 2px  rgba(255, 255, 255, 0.5));
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.1);
+}
+#shoot:hover, #shoot:active{
+    transform: scale(1.2, 1.4);
+    background-color: white;
+    color: black;
+    font-weight: 900;
+}
+.winning{
+    width: 500px;
+    height: 70px;
+    background-color: transparent;
+    position: fixed;
+    left: 50%;
+    bottom: -2px;
+    transform: translate(-49.2%, 5%);
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 5px solid white;
+    backdrop-filter: blur(7px);
+}
+.left, .right{
+    /* border: 5px solid white; */
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+.namec, .namep{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: red; */
+}
+.namec img, .namep img{
+    height: 100%;
+}
+.namec div, .namep div{
+    font-size: 50px;
+    font-weight: 900;
+    transform: translateY(-2px);
+}
+.scorec, .scorep{
+    width: 40%;
+    /* background-color: yellow; */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 900;
+}
+@media(max-width: 550px){
+    #title{
+        font-size: 25px;
+    }
+    .container{
+        width: 300px;
+        height: 350px;
+    }
+    .disp{
+        transform: scale(0.8);
+        margin: -10px;
+    }
+    .top{
+        border-radius: 15px;
+    }
+    .contop{
+        margin-top: -15px;
+    }
+    #player{
+        background: url('ICONS/LOAD.png') no-repeat;
+        background-size: contain;
+        /* background-color: blue; */
+        box-sizing: border-box;
+        margin-top: 7px;
+        margin-left: 1px;
+
+    }
+    #comp{
+        background: url('ICONS/LOAD2.png') no-repeat;
+        background-size: contain;
+        /* background-color: blue; */
+        box-sizing: border-box;
+        margin-top: 7px;
+        margin-left: 1px;
+
+    }
+    .status{
+        /* background-color: red; */
+        height: 80px;
+        padding: 0;
+    }
+    #playagain{
+        margin: 0;
+        font-size: 12px;
+        
+    }
+    #status{
+        font-size: 25px;
+        margin: 0;
+    }
+    .disp img{
+        width: 50px;
+        height: 50px;
+    }
+    .disp p{
+        font-size: 5px;
+    }
+    .option{
+        width: 35px;
+        height: 35px;
+    }
+    .opt{
+        padding: 10px 0;
+    }
+    .top{
+        border: 3.5px solid white;
+    }
+    .winning{
+        width: 300px;
+        bottom: -1px;
+    }
+    .scorec, .scorep{
+        font-size: 40px;
+    }
+    .left div, .right div{
+        font-size: 30px;
+        margin-top: 8px;
+    }
+}
+@media(max-height: 640px){
+    .container{
+        max-height: 450px;
+    }
+    .bottom{
+        /* margin-top: -25px; */
+    }
+    #title{
+        margin-top: -20px;
+    }
+}

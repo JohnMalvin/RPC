@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="icon" type="image/png" href="ICONS/SCISORSFILL.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <video autoplay muted loop src="BACKGROUND2.mp4"></video>
+    <div class="header">
+        <p id="title"><b>ROCK</b> PAPER <b>SCISSORS</b></p>
+    </div>
+    <div class="container">
+        <div class="top">
+            <div class="contop">
+                <div class="player disp">
+                    <div id="player"></div>
+                    <p>PLAYER</p>
+                </div>
+                <div class="vs disp">
+                    <img src="ICONS/VERSUS.png" id="versus">
+                </div>
+                <div class="comp disp">
+                    <div id="comp"></div>
+                    <p>COMPUTER</p>
+                </div>
+                
+            </div>
+            <div class="status">
+                <div id="status"></div>
+                <div class="play">
+                    <button id="playagain">PLAY AGAIN?</button>
+                </div>
+            </div> 
+        </div>
+        <div class="bottom">
+            <div class="opt">
+                <div class="option" id="rock">
+                    <div id="rockimg" class="image"></div>
+                </div>
+                <div class="option" id="paper">
+                    <div id="paperimg" class="image"></div>
+                </div>
+                <div class="option" id="scisors">
+                    <div id="scisorsimg" class="image"></div>
+                </div>
+            </div>
+            <button id="shoot">SHOOT</button>
+        </div>
+    </div>
+    <div class="winning">
+        <div class="left">
+            <div class="namep">
+                <img src="ICONS/PLAYER.png">
+                <div>:</div>
+            </div>
+            <div class="scorep" id="scorep">00</div>
+        </div>
+        <div class="right">
+            <div class="namec">
+                <img src="ICONS/COMPUTER.png">
+                <div>:</div>
+            </div>
+            <div class="scorec" id="scorec">00</div>
+        </div>
+    </div>
+
+    <script src="//code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-3.7.1.min.js"><\/script>');
+    </script>
+    <script src="js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
